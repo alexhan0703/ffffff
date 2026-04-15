@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과학 사전 (Science Dictionary)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔬 과학 사전</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="과학 용어를 검색하세요 (예: 광합성, 블랙홀)...">
+            <div id="results" class="results-list"></div>
+        </div>
+        <div id="term-detail" class="term-detail hidden">
+            <h2 id="detail-title"></h2>
+            <p id="detail-category" class="category"></p>
+            <div id="detail-definition" class="definition"></div>
+            <button onclick="closeDetail()">닫기</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
